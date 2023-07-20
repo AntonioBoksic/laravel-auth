@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\MainController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +31,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+//creiamo le rotte index e show senza pensare alla distinzione loggato o non-loggato per il momento
+Route::get('/', [MainController::class, 'index'])->name('project.index');
+Route::get('/show/{id}', [MainController::class, 'show'])->name('project.show');
+
