@@ -8,19 +8,23 @@
     </h2>
     <div class="row justify-content-center">
         <div class="col">
-            <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
-
-                <div class="card-body">
-                    <!-- @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                    @endif
-
-                    {{ __('You are logged in!') }} -->
-                </div>
+            <div class="my-3">
+            <strong>project name:</strong> {{$project -> name}}
             </div>
+           
+            <div class="my-3">
+            <strong>programming languages used:</strong> {{$project -> programming_language}}
+            </div>
+
+            <div class="my-3">
+            <strong>description:</strong> {{$project -> description}}
+            </div>
+
+            <div class="my-3">
+            <strong>compatible devices:</strong> {{$project -> device}}
+            </div>
+           
+
         </div>
     </div>
 </div>

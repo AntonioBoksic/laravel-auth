@@ -15,7 +15,14 @@ class MainController extends Controller
         return view("project.index", compact("projects"));
     }
 
-    public function show($id){
+    
 
+    public function show($id) {
+    
+        $project = Project :: findOrFail($id);
+
+        return view("project.show", compact("project"));
     }
+
+   
 }

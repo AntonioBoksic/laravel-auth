@@ -10,7 +10,10 @@
             <ul>
                 @foreach ($projects as $project)
                 <li>
-                    {{$project -> name}}  
+                    <a href=" {{ route('project.show', $project -> id) }} ">
+                    project {{$project -> name}}  
+                    </a>
+                      
                 </li>
                 @endforeach
             </ul>

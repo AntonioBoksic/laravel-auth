@@ -16,6 +16,10 @@ use App\Http\Controllers\MainController;
 |
 */
 
+
+
+//questa viene sovrascritta se aggiungiamo un'altra rotta "/"
+//cosa che abbiamo fatto con la rotta 'project.index'
 Route::get('/', function () {
     return view('welcome');
 });
