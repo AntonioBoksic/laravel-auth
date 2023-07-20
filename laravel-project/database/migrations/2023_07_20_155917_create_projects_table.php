@@ -18,8 +18,8 @@ return new class extends Migration
 
             $table->string('name');
             $table->string('programming_language');
-            $table->string('description')
-            $table->string('device')
+            $table->string('description');
+            $table->string('device');
 
             $table->timestamps();
         });

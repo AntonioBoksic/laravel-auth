@@ -17,7 +17,10 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake() -> word(),
+            'programming_language' => fake() ->randomElements(['Javascript', 'Vue', 'PHP', 'Laravel', 'Java', 'Flutter', ''], 3),
+            'description' => fake() -> paragraph(20),
+            'device' => fake() -> randomElements(['IOS', 'Android', 'Desktop', 'd', 'e'], 3),
         ];
     }
 }
