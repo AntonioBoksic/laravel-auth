@@ -18,9 +18,9 @@ class ProjectFactory extends Factory
     {
         return [
             'name' => fake() -> word(),
-            'programming_language' => fake() ->randomElements(['Javascript', 'Vue', 'PHP', 'Laravel', 'Java', 'Flutter', ''], 3),
-            'description' => fake() -> paragraph(20),
-            'device' => fake() -> randomElements(['IOS', 'Android', 'Desktop', 'd', 'e'], 3),
+            'programming_language' => fake() ->randomElement(['Javascript', 'Vue', 'PHP', 'Laravel', 'Java', 'Flutter'], 1),
+            'description' => fake() -> paragraph(3),
+            'device' => fake() -> randomElement(['IOS', 'Android', 'Desktop', 'Apple Watch'], 1),
         ];
     }
 }
